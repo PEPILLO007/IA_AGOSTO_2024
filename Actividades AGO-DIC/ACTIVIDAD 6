@@ -1,0 +1,325 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vNTty8SK-AYo",
+        "outputId": "64171ecf-5267-4449-e43e-a5b385037be7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese su nombre: Aarón\n",
+            "Hola Aarón\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Actividad 5: Diseño de algoritmos en Python\n",
+        "#Jose Manuel Rodriguez Villanueva / 2109562 / IMTC / N1-LMV\n",
+        "#1.Desarrolla un algoritmo que le pida al usuario por su nombre y que lo salude con su nombre, excepto si se llama “Ana”, “Juan”, y “Pedro”.\n",
+        "name = str(input(\"Ingrese su nombre: \"))\n",
+        "if (name == \"Ana\") or (name == \"Juan\") or (name == \"Pedro\"):\n",
+        "  print(\"\")\n",
+        "else :\n",
+        "  print(\"Hola \"+ str(name))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "28P4zPQO_v1r",
+        "outputId": "a5c4d70c-389d-40c9-bab0-7d887ae7f024"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Cuantos elementos tiene tu lista?: 4\n",
+            "Ingresa el elemneto 1 de la lista: A0\n",
+            "Ingresa el elemneto 2 de la lista: A1\n",
+            "Ingresa el elemneto 3 de la lista: A2\n",
+            "Ingresa el elemneto 4 de la lista: A3\n",
+            "Los elementos de la lista invertida son:  ['A3', 'A2', 'A1', 'A0']\n"
+          ]
+        }
+      ],
+      "source": [
+        "#2.Desarrolla un algoritmo que por medio de una función, le pida al usuario una lista de N elementos y como resultado invierta el sentido de la lista.\n",
+        "def generador():\n",
+        "  global i\n",
+        "  i=i+1\n",
+        "  elemento= (input((\"Ingresa el elemneto \") + str(i) + (\" de la lista: \")))\n",
+        "  lista.append(elemento)\n",
+        "\n",
+        "x=int(input(\"¿Cuantos elementos tiene tu lista?: \"))\n",
+        "i=0\n",
+        "lista=[]\n",
+        "while x!=i :\n",
+        "  generador()\n",
+        "\n",
+        "print(\"Los elementos de la lista invertida son: \",lista[::-1])"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G_ci97wIJUsF",
+        "outputId": "3f290a0d-ca45-4e60-d709-0419a36b811a"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "¿hasta cuántos números de la serie de Fibonacci quiere generar?: 8\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n"
+          ]
+        }
+      ],
+      "source": [
+        "#3.Desarrolla un algoritmo que le pregunte al usuario cuántos números de la serie de Fibonacci quiere generar y que al final los imprima.\n",
+        "x=int(input(\"¿hasta cuántos números de la serie de Fibonacci quiere generar?: \"))\n",
+        "y=0\n",
+        "z=1\n",
+        "i=0\n",
+        "while x!=i:\n",
+        "  if (i == 0):\n",
+        "    print(i)\n",
+        "  elif(i==1):\n",
+        "    print(i)\n",
+        "  else:\n",
+        "    formula = y + z\n",
+        "    print(formula)\n",
+        "    y = z\n",
+        "    z = formula\n",
+        "  i = i+1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8l3cNVsiKmWU",
+        "outputId": "7e90e69e-0ab4-47ea-e2ff-154f32c5179e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 50\n",
+            "El nuemro 50 es mayor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 25\n",
+            "El nuemro 25 es menor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 30\n",
+            "El nuemro 30 es menor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 40\n",
+            "El nuemro 40 es mayor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 35\n",
+            "El nuemro 35 es mayor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 31\n",
+            "El nuemro 31 es menor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 33\n",
+            "El nuemro 33 es mayor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 34\n",
+            "El nuemro 34 es mayor que el numero secreto\n",
+            "Vuelva a intentar \n",
+            "Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: 32\n",
+            "Es corecto el numero secreto es: 32\n"
+          ]
+        }
+      ],
+      "source": [
+        "#4.Juego de adivinar el número: Crea un programa que genere un número aleatorio entre 1 y 100, y luego le pida al usuario que adivine el número. El programa debe proporcionar pistas al usuario si el número es mayor o menor que el número objetivo, y seguir solicitando un nuevo intento hasta que el usuario adivine correctamente.\n",
+        "import random\n",
+        "numero = random.randint(1, 100)\n",
+        "x=int(input(\"Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: \"))\n",
+        "\n",
+        "while (x != numero):\n",
+        "  if(x<numero):\n",
+        "    print(\"El nuemro \"+ str(x)+\" es menor que el numero secreto\")\n",
+        "    print(\"Vuelva a intentar \")\n",
+        "    x=int(input(\"Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: \"))\n",
+        "  else:\n",
+        "    print(\"El nuemro \"+ str(x) +\" es mayor que el numero secreto\")\n",
+        "    print(\"Vuelva a intentar \")\n",
+        "    x=int(input(\"Introdusca un numero para intentar adivinar el numero secreto pista no es mayor a 100 ni menor a 1: \"))\n",
+        "\n",
+        "print(\"Es corecto el numero secreto es: \" + str(numero) )"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o_uRQNSPQzNA",
+        "outputId": "de8db526-75dd-42de-8a18-cb614ee929db"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Introduce el primer número del rango que deseas: 2\n",
+            "Introduce el número final del rango que deseas: 20\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "11\n",
+            "13\n",
+            "17\n",
+            "19\n"
+          ]
+        }
+      ],
+      "source": [
+        "#5.Ejercicio de cálculo de números primos en un rango dado: Escribe un programa que solicite al usuario un rango de números y muestre todos los números primos dentro de ese rango.\n",
+        "def es_primo(n):\n",
+        "    if(n <= 1):\n",
+        "        return False\n",
+        "    for i in range(2, int(n**0.5) + 1):\n",
+        "        if (n % i == 0):\n",
+        "            return False\n",
+        "    return True\n",
+        "\n",
+        "x = int(input(\"Introduce el primer número del rango que deseas: \"))\n",
+        "y = int(input(\"Introduce el número final del rango que deseas: \"))\n",
+        "\n",
+        "while (x <= y):\n",
+        "    if (es_primo(x)):\n",
+        "        print(x)\n",
+        "    x = x + 1\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#6.Ejercicio de implementación de una calculadora básica utilizando funciones: Escribe un programa que solicite al usuario dos números y realice operaciones básicas como suma, resta, multiplicación y división utilizando funciones separadas para cada operación.\n",
+        "def suma():\n",
+        "    global x\n",
+        "    global y\n",
+        "    formula = x + y\n",
+        "    print(str(x) + \" + \" + str(y) + \" = \" + str(formula))\n",
+        "\n",
+        "def resta():\n",
+        "    global x\n",
+        "    global y\n",
+        "    formula = x - y\n",
+        "    print(str(x) + \" - \" + str(y) + \" = \" + str(formula))\n",
+        "\n",
+        "def multiplicacion():\n",
+        "    global x\n",
+        "    global y\n",
+        "    formula = x * y\n",
+        "    print(str(x) + \" x \" + str(y) + \" = \" + str(formula))\n",
+        "\n",
+        "def division():\n",
+        "    global x\n",
+        "    global y\n",
+        "    if y != 0:\n",
+        "        formula = x / y\n",
+        "        print(str(x) + \" / \" + str(y) + \" = \" + str(formula))\n",
+        "    else:\n",
+        "        print(\"Error: No se puede dividir entre cero.\")\n",
+        "\n",
+        "i = float(input(\"\"\"Seleccione la opción de la operación que desea realizar\n",
+        "1 -> Suma\n",
+        "2 -> Resta\n",
+        "3 -> Multiplicación\n",
+        "4 -> División\n",
+        "Opcion: \"\"\"))\n",
+        "\n",
+        "x = float(input(\"¿Cuál es el primer número de tu operación? : \"))\n",
+        "y = float(input(\"¿Cuál es el segundo número de tu operación? : \"))\n",
+        "\n",
+        "if i == 1:\n",
+        "    suma()\n",
+        "elif i == 2:\n",
+        "    resta()\n",
+        "elif i == 3:\n",
+        "    multiplicacion()\n",
+        "elif i == 4:\n",
+        "    division()\n",
+        "else:\n",
+        "    print(\"Opción inválida\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "iMz9GaVA6CX1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e37fc98a-b2b4-4030-b26b-2249edaaf25e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Seleccione la opción de la operación que desea realizar\n",
+            "1 -> Suma\n",
+            "2 -> Resta\n",
+            "3 -> Multiplicación\n",
+            "4 -> División\n",
+            "Opcion: 4\n",
+            "¿Cuál es el primer número de tu operación? : 1\n",
+            "¿Cuál es el segundo número de tu operación? : 2\n",
+            "1.0 / 2.0 = 0.5\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
